@@ -1,9 +1,18 @@
+import string
 
 # decode vigenere cipher
+def count_alphabets(text,alphabets):
+    for i in alphabets
+        F[i] = text.count(i)
+    return F
 
-def calculateIndexOfCoincidence():
-    for i in range(26)
-        index_of_coincidence = F[i]*(F[i]-1) / N(N-1)
+def calculateIndexOfCoincidence(text): 
+    N = len(text)
+    alphabets = list(string.ascii_lowercase)
+    F = count_alphabets(text,alphabets)
+    for i in num_alphabets
+        index_of_coincidence += F[i]*(F[i]-1)
+    return (index_of_coincidence/N(N-1))
 
 def guessLengthOfKey(text)
 # use calculateIndexOfCoincidence()
