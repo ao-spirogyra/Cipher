@@ -15,10 +15,20 @@ def calculateIndexOfCoincidence(text):
     return (index_of_coincidence/N(N-1))
 
 def guessLengthOfKey(text)
-# use calculateIndexOfCoincidence()
+    # use calculateIndexOfCoincidence()
+
+def splitTextToGroup(text,length_of_key)
+    #split text into each group stepped by length of the key 
+
+def unite():
+    
 
 def decode(ciphered_text,length_of_key):
-
+    for l in length_of_key
+        EachGroup[l] = splitTextToGroup(ciphered_text,l,length_of_key)
+        eachAnalyzedGroup = analyzeFrequency(EachGroup(l))
+    return unite(eachAnalyzedGroup)
+    
 
 if __name__ == "__main__"
     ciphered_text = getTextFrom()
