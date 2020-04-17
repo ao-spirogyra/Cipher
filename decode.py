@@ -16,7 +16,8 @@ def calculateIndexOfCoincidence(text):
 def guessLengthOfKey(text):
     # use calculateIndexOfCoincidence()
 
-def analyzeFrequency(group):
+def DecryptCaeser(group):
+    # use remainder of ascii%26 to express key and letter　
 
 def splitTextToGroup(text,length_of_key)
     #split text into each group stepped by length of the key 
@@ -31,13 +32,17 @@ def splitTextToGroup(text,length_of_key)
 def unite(group,length_of_key):
     for i in len(group[0])
         for l in length_of_key
-            plain_text = plain_text.append(group[l][i])
+            plain_text_list = plain_text_list.append(group[l][i])
     return plain_text
 
 
 def decode(ciphered_text,length_of_key):
+    # should modify to decrypt more than once corresponding with guessed key
+    # execute decryptCaeser in for loop in case make decryptCaeser module
     group = splitTextToGroup(ciphered_text,length_of_key)
-    eachAnalyzedGroup = analyzeFrequency(group)
+
+    eachAnalyzedGroup = decryptCaeser(group)
+    
     plain_text_list = unite(eachAnalyzedGroup,length_of_key)
     plain_text = ''
     return plain_text.join(plain_text_list)
