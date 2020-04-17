@@ -1,5 +1,4 @@
 import string
-import math
 
 # decode vigenere cipher
 def count_alphabets(text,alphabets):
@@ -14,8 +13,10 @@ def calculateIndexOfCoincidence(text):
     index_of_coincidence = sum([F[i]*(F[i]-1) for i in alphabets])/N(N-1)
     return index_of_coincidence
 
-def guessLengthOfKey(text)
+def guessLengthOfKey(text):
     # use calculateIndexOfCoincidence()
+
+def analyzeFrequency(group):
 
 def splitTextToGroup(text,length_of_key)
     #split text into each group stepped by length of the key 
