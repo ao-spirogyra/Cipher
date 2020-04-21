@@ -2,7 +2,7 @@ import string
 
 # decode vigenere cipher
 def count_alphabets(text,alphabets):
-    for i in alphabets
+    for i in alphabets:
         F[i] = text.count(i)
     return F
 
@@ -22,16 +22,16 @@ def DecryptCaeser(group):
 def splitTextToGroup(text,length_of_key)
     #split text into each group stepped by length of the key 
     text_list = list(text)
-    for i in length_of_key
+    for i in length_of_key:
         x = 0
-        for l in range(i,len(text),length_of_key)
+        for l in range(i,len(text),length_of_key):
             group[i][x] = text_list[l]
             x += 1
     return group
 
 def unite(group,length_of_key):
-    for i in len(group[0])
-        for l in length_of_key
+    for i in len(group[0]):
+        for l in length_of_key:
             plain_text_list = plain_text_list.append(group[l][i])
     return plain_text
 
