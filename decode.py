@@ -19,7 +19,7 @@ def guessLengthOfKey(text):
 def DecryptCaeser(group):
     # use remainder of ascii%26 to express key and letter　
 
-def splitTextToGroup(text,length_of_key)
+def splitTextToGroup(text,length_of_key):
     #split text into each group stepped by length of the key 
     text_list = list(text)
     for i in length_of_key:
@@ -48,7 +48,7 @@ def decode(ciphered_text,length_of_key):
     return plain_text.join(plain_text_list)
     
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     ciphered_text = getTextFrom()
     length_of_key = guessLengthOfKey(text)
     plain_text = decode(ciphered_text,length_of_key)
