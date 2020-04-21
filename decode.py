@@ -15,18 +15,23 @@ def calculateIndexOfCoincidence(text):
 
 def guessLengthOfKey(text):
     # use calculateIndexOfCoincidence()
-
-def DecryptCaeser(group):
+    print('sthg')
+def decryptCaeser(group):
     # use remainder of ascii%26 to express key and letter　
+    print('sthg')
 
 def splitTextToGroup(text,length_of_key):
     #split text into each group stepped by length of the key 
     text_list = list(text)
-    for i in length_of_key:
+    group = [[]]
+    for i in range(length_of_key):
         x = 0
         for l in range(i,len(text),length_of_key):
-            group[i][x] = text_list[l]
-            x += 1
+            if not(text_list[l]):
+                break
+            else: 
+                group[i][x] = text_list[l]
+                x += 1
     return group
 
 def unite(group,length_of_key):
