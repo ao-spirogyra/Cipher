@@ -2,9 +2,16 @@ import string
 
 # decode vigenere cipher
 def count_alphabets(text,alphabets):
-    for i in alphabets:
-        F[i] = text.count(i)
-    return F
+    # make dict recording appearance times for each alphabets
+    dict_counter = {}
+    for i in range(len(alphabets)):
+        print(alphabets)
+        
+        alphabet = alphabets[i]
+        
+        num = text.count(alphabet)
+        dict_counter.setdefault(alphabet,num)
+    return dict_counter
 
 def calculateIndexOfCoincidence(text): 
     N = len(text)
