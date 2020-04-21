@@ -2,9 +2,11 @@ import string
 
 # decode vigenere cipher
 def count_alphabets(text,alphabets):
+    # make dict recording appearance times for each alphabets
+    alphabets_counter =[]
     for i in alphabets:
-        F[i] = text.count(i)
-    return F
+        alphabets_counter[i] = dict(alphabets = text.count(i))
+    return alphabets_counter
 
 def calculateIndexOfCoincidence(text): 
     N = len(text)
@@ -27,11 +29,8 @@ def splitTextToGroup(text,length_of_key):
     for i in range(length_of_key):
         x = 0
         for l in range(i,len(text),length_of_key):
-            if not(text_list[l]):
-                break
-            else: 
-                group[i][x] = text_list[l]
-                x += 1
+            group[i][x] = text_list[l]
+            x += 1
     return group
 
 def unite(group,length_of_key):
