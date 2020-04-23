@@ -5,12 +5,8 @@ def count_alphabets(text,alphabets):
     # make dict recording appearance times for each alphabets
     dict_counter = {}
     for i in range(len(alphabets)):
-        print(alphabets)
-        
         alphabet = alphabets[i]
-        
-        num = text.count(alphabet)
-        dict_counter.setdefault(alphabet,num)
+        dict_counter.setdefault(alphabet,text.count(alphabet))
     return dict_counter
 
 def calculateIndexOfCoincidence(text): 
