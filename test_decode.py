@@ -3,6 +3,7 @@ import string
 from decode import count_alphabets
 from decode import calculateIndexOfCoincidence
 from decode import splitTextToGroup
+from decode import unite
 
 class MainTest(unittest.TestCase):
     def test_count_alphabets(self):
@@ -29,6 +30,12 @@ class MainTest(unittest.TestCase):
         self.assertEqual(
             [['t', 'i', 'l', 'm', 't', 'u', 's', 'a', 'n', 'd'], ['r', 'p', 'e', 'i', 's', 'i', 'b', 'n', 'e', '']],
             textGroup)
+    
+    def test_unite(self):
+        group =  [['t', 'i', 'l', 'm', 't', 'u', 's', 'a', 'n', 'd'], ['r', 'p', 'e', 'i', 's', 'i', 'b', 'n', 'e', '']]
+        length_of_key = 2
+        plain_text = unite(group,length_of_key)
+        self.assertEqual(plain_text,"triplemitsuisbanned")
 
 if __name__ == "__main__":
     unittest.main()

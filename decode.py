@@ -27,7 +27,6 @@ def splitTextToGroup(text,length_of_key):
     #split text into each group stepped by length of the key 
     text_list = list(text)
     group = [[""]*((len(text)//length_of_key) + 1) for i in [0]*length_of_key]
-    print(group)
     for i in range(length_of_key):
         x = 0
         for l in range(i,len(text_list) + 1,length_of_key):
@@ -40,9 +39,12 @@ def splitTextToGroup(text,length_of_key):
     return group
 
 def unite(group,length_of_key):
-    for i in len(group[0]):
-        for l in length_of_key:
-            plain_text_list = plain_text_list.append(group[l][i])
+    plain_text_list = []
+    plain_text = ""
+    for i in range(len(group[0])):
+        for l in range(length_of_key):
+            plain_text_list.append(group[l][i])
+    plain_text = "".join(plain_text_list)
     return plain_text
 
 
