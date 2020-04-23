@@ -13,7 +13,7 @@ def calculateIndexOfCoincidence(text):
     N = len(text)
     alphabets = list(string.ascii_lowercase)
     F = count_alphabets(text,alphabets)
-    index_of_coincidence = sum([F[i]*(F[i]-1) for i in alphabets])/N(N-1)
+    index_of_coincidence = sum([F[i]*(F[i]-1) for i in alphabets])/N*(N-1)
     return index_of_coincidence
 
 def guessLengthOfKey(text):
