@@ -1,6 +1,7 @@
 import unittest
 import string
 from decode import count_alphabets
+from decode import calculateIndexOfCoincidence
 
 class MainTest(unittest.TestCase):
     def test_count_alphabets(self):
@@ -15,6 +16,10 @@ class MainTest(unittest.TestCase):
             },
             num_of_alphabets)
 
+    def test_calculateIndexOfCoincidence(self):
+        text = "triplemitsuisbanned"
+        IC = calculateIndexOfCoincidence(text)
+        self.assertEqual(13.26315789473684,IC)
 
 
 if __name__ == "__main__":
