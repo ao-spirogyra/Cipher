@@ -2,6 +2,7 @@ import unittest
 import string
 from decode import count_alphabets
 from decode import calculateIndexOfCoincidence
+from decode import splitTextToGroup
 
 class MainTest(unittest.TestCase):
     def test_count_alphabets(self):
@@ -21,6 +22,11 @@ class MainTest(unittest.TestCase):
         IC = calculateIndexOfCoincidence(text)
         self.assertEqual(13.26315789473684,IC)
 
+    def test_splitTextToGroup(self):
+        text = "triplemitsuisbanned"
+        length_of_key = 2
+        textGroup = splitTextToGroup(text,length_of_key)
+        print(textGroup)
 
 if __name__ == "__main__":
     unittest.main()
