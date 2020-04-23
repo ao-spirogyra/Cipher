@@ -35,7 +35,8 @@ def splitTextToGroup(text,length_of_key):
                 group[i][x] = text_list[l]
                 x += 1
             except LookupError as e:
-                break
+                if (group[i][x] == ""):
+                    break
     return group
 
 def unite(group,length_of_key):
