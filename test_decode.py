@@ -26,7 +26,9 @@ class MainTest(unittest.TestCase):
         text = "triplemitsuisbanned"
         length_of_key = 2
         textGroup = splitTextToGroup(text,length_of_key)
-        print(textGroup)
+        self.assertEqual(
+            [['t', 'i', 'l', 'm', 't', 'u', 's', 'a', 'n', 'd'], ['r', 'p', 'e', 'i', 's', 'i', 'b', 'n', 'e', '']],
+            textGroup)
 
 if __name__ == "__main__":
     unittest.main()

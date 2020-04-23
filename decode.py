@@ -26,12 +26,16 @@ def decryptCaeser(group):
 def splitTextToGroup(text,length_of_key):
     #split text into each group stepped by length of the key 
     text_list = list(text)
-    group = [[]]
+    group = [[""]*((len(text)//length_of_key) + 1) for i in [0]*length_of_key]
+    print(group)
     for i in range(length_of_key):
         x = 0
-        for l in range(i,len(text),length_of_key):
-            group[i][x] = text_list[l]
-            x += 1
+        for l in range(i,len(text_list) + 1,length_of_key):
+            try:
+                group[i][x] = text_list[l]
+                x += 1
+            except LookupError as e:
+                break
     return group
 
 def unite(group,length_of_key):
