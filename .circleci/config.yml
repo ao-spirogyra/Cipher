@@ -13,7 +13,7 @@ jobs:
       - python/save-cache
       - run:
           command: python test_decode.py
-          name: Test
+          name: Unittest
 
 workflows:
   main:
