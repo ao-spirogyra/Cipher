@@ -1,18 +1,12 @@
 import string
+from TextPackage import texthundler as thundle
 
 # decode vigenere cipher
-def count_alphabets(text,alphabets):
-    # make dict recording appearance times for each alphabets
-    dict_counter = {}
-    for i in range(len(alphabets)):
-        alphabet = alphabets[i]
-        dict_counter.setdefault(alphabet,text.count(alphabet))
-    return dict_counter
 
 def calculateIndexOfCoincidence(text): 
     N = len(text)
     alphabets = list(string.ascii_lowercase)
-    F = count_alphabets(text,alphabets)
+    F = thundle.count_alphabets(text,alphabets)
     index_of_coincidence = sum([F[i]*(F[i]-1) for i in alphabets])/N*(N-1)
     return index_of_coincidence
 
@@ -62,6 +56,6 @@ def decode(ciphered_text,length_of_key):
 
 if __name__ == "__main__":
     ciphered_text = getTextFrom()
-    length_of_key = guessLengthOfKey(text)
+    length_of_key = guessLengthOfKey(ciphered_text)
     plain_text = decode(ciphered_text,length_of_key)
     print(plain_text)
