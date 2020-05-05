@@ -1,6 +1,6 @@
 import unittest
 import string
-from decode import count_alphabets
+import TextPackage.texthundler as thundle
 from decode import calculateIndexOfCoincidence
 from decode import splitTextToGroup
 from decode import unite
@@ -9,7 +9,7 @@ class MainTest(unittest.TestCase):
     def test_count_alphabets(self):
         alphabets = list(string.ascii_lowercase)
         text = "triplemitsuisbanned"
-        num_of_alphabets = count_alphabets(text,alphabets)
+        num_of_alphabets = thundle.count_alphabets(text,alphabets)
         self.assertEqual(
             {
                 'a': 1, 'b': 1, 'c': 0, 'd': 1, 'e': 2, 'f': 0, 'g': 0, 'h': 0, 'i': 3,
